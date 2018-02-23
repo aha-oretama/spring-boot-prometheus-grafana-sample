@@ -18,7 +18,6 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
 
-
 # sample
 scrape_configs:
   - job_name:       'sample-random'
@@ -29,7 +28,5 @@ scrape_configs:
     metrics_path: /prometheus
 
     static_configs:
-      - targets: ['10.17.212.196:8080']
-        labels:
-          group: 'production'
+      - targets: ['web:8080']
 

@@ -1,10 +1,16 @@
 version: '3'
 services:
+  web:
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/code
   prometheus:
     image: prom/prometheus
     container_name: prometheus
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./env/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - 9090:9090
   grafana:
@@ -13,5 +19,5 @@ services:
     ports:
       - 3000:3000
     env_file:
-      - ./grafana.env
+      - ./env/grafana.env
 
