@@ -22,36 +22,29 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<metrics.version>0.5.1.RELEASE</metrics.version>
+		<prom.version>0.2.0</prom.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- prometheus -->
-		<!-- Hotspot JVM metrics-->
 		<dependency>
-			<groupId>io.prometheus</groupId>
-			<artifactId>simpleclient_hotspot</artifactId>
-			<version>0.2.0</version>
+			<groupId>org.springframework.metrics</groupId>
+			<artifactId>spring-metrics</artifactId>
+			<version>${metrics.version}</version>
 		</dependency>
-		<!-- Logback -->
 		<dependency>
-			<groupId>io.prometheus</groupId>
-			<artifactId>simpleclient_logback</artifactId>
-			<version>0.2.0</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator</artifactId>
 		</dependency>
-		<!-- For spring boot-->
 		<dependency>
 			<groupId>io.prometheus</groupId>
-			<artifactId>simpleclient_spring_boot</artifactId>
-			<version>0.2.0</version>
+			<artifactId>simpleclient_common</artifactId>
+			<version>${prom.version}</version>
 		</dependency>
 
 		<dependency>
