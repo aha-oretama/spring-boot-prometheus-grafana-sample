@@ -1,6 +1,8 @@
 # spring-boot-prometheus-grafana-sample
 
-This is a sample for monitoring spring boot web application by using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/).
+This is a sample for monitoring spring boot web application by using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/).  
+This is based spring boot 1.5.  
+If you use spring boot 2.0 or more, you should see [spring-boot-2.0-prometheus-metrics](https://github.com/aha-oretama/spring-boot-2.0-prometheus-metrics) sample.   
 
 ## How to run
 
